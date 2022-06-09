@@ -7,8 +7,16 @@ describe('backend-express-template routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
-  it('example test - delete me!', () => {
-    expect(1).toEqual(1);
+
+  it('/companions/:id should return companion detail', async () => {
+    const res = await request(app).get('/companions/1');
+    const camellia = {
+      id: '1',
+      name: 'Camellia',
+      class: 'Shaman',
+      chapter: '1',
+    };
+    expect(res.body).toEqual(camellia);
   });
   afterAll(() => {
     pool.end();
