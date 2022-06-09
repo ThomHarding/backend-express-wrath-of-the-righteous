@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles.css" rel="stylesheet" />
+    <title>WotR Companions</title>
+  </head>
+  <body>
+    <header class="bg-gray-700 text-white p-4">
+      <h1 class="text-lg font-semibold">Wrath of the Righteous Companion Detail</h1>
+    </header>
+    <main class="p-4 w-1/2 m-auto">
+      This API is a resource for the companions in the game Pathfinder: Wrath of the Righteous.
+      The routes are as follows:
+      <table class="table border-2 mt-4">
+        <thead class="table-header-group border-2">
+          <tr>
+            <th class="table-cell p-3">Route</th>
+            <th class="table-cell p-3">Method</th>
+            <th class="table-cell p-3 w-40">Description</th>
+            <th class="table-cell p-3">Example</th>
+          </tr>
+        </thead>
+        <tbody class="table-row-group">
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/companions</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a list of companions' names, ids, classes, and the chapter you can first recruit them.</td>
+            <td class="table-cell p-3">
+              <a href="/companions" target="_blank" class="text-blue-700"
+                >List companions</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/companions/:id</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Returns the detail about the companion matching the id in the parameter
+            </td>
+            <td class="table-cell p-3">
+              <a href="/companions/1" target="_blank" class="text-blue-700"
+                >Get companion 1</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
