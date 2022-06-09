@@ -1,9 +1,9 @@
 -- Use this file to define your SQL tables
 -- The SQL in this file will be executed when you run `npm run setup-db`
 
-DROP TABLE IF EXISTS Companions;
+DROP TABLE IF EXISTS companions;
 
-CREATE TABLE Companions (
+CREATE TABLE companions (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR NOT NULL,
     alignment VARCHAR NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE Companions (
     pathlocked BOOLEAN
 );
 
-INSERT INTO Companions (name, alignment, class, chapter, pathlocked) VALUES
+INSERT INTO companions (name, alignment, class, chapter, pathlocked) VALUES
   ('Camellia', 'Chaotic Evil', 'Shaman', 1, false),
   ('Seelah', 'Lawful Good', 'Paladin', 1, false),
   ('Lann', 'Lawful Neutral', 'Monk', 1, false),
